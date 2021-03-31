@@ -1,10 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { setupListeners } from '@rtk-incubator/rtk-query';
+import { spacexApi } from '../services/users';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    [spacexApi.reducerPath]: spacexApi.reducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(spacexApi.middleware)
 });
 
 export type RootState = ReturnType<typeof store.getState>;
@@ -14,3 +16,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
+
+setupListeners(store.dispatch);

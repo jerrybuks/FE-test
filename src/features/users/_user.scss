@@ -1,0 +1,203 @@
+.user {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-container {
+    background: $color-grey-light-2;
+    position: relative;
+    padding: 5;
+    width: 50vw;
+    min-height: 100vh;
+    // min-width: 50rem;
+    box-shadow: $shadow-dark;
+    // min-height: 50rem;
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone) {
+      min-width: 90vw;
+    }
+  }
+  &--card {
+    text-align: center;
+    padding-top: 2rem;
+
+    &-img {
+      border-radius: 50%;
+    }
+    &-username {
+      color: gray;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+  }
+  &--add-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #ff4271;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    right: 30%;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+  }
+  &-edit {
+    height: 15px;
+    width: 22px;
+    cursor: pointer;
+  }
+  &-del {
+    height: 25px;
+    position: absolute;
+    width: 22px;
+    right: 15px;
+    bottom: 20px;
+    cursor: pointer;
+  }
+}
+
+.form-inventory {
+  display: flex;
+  justify-content: center;
+}
+.form-inventory__header {
+  text-align: center;
+}
+.form-inventory__body {
+  padding: 1rem;
+  width: 30rem;
+  border: 0;
+  border-radius: 15px;
+}
+.form-inventory__body div {
+  padding: 10px;
+  width: 95%;
+}
+.form-inventory__body div input,
+.form-inventory__body div select {
+  margin-top: 5px;
+  width: inherit;
+  font-size: 14px;
+}
+
+.form-inventory__body div .form-inventory__body-submitBtn {
+  width: 40%;
+  height: 2rem;
+  color: #ffffff;
+  outline: 0;
+  border: none;
+  /* background-color: rgb(58, 204, 108); */
+  background-color: $color-primary-light;
+}
+
+form {
+    margin: auto;
+    border-radius: 10px;
+  }
+  
+  form label {
+      font-size:14px;
+      color:darkgray;
+      cursor:pointer;
+  }
+  
+  form label,
+  form input {
+      float:left;
+      clear:both;
+  }
+  
+  form input {
+      margin:15px 0;
+      padding:15px 10px;
+      width:100%;
+      outline:none;
+      border:1px solid #bbb;
+      border-radius:20px;
+      display:inline-block;
+      -webkit-box-sizing:border-box;
+         -moz-box-sizing:border-box;
+              box-sizing:border-box;
+      -webkit-transition:0.2s ease all;
+         -moz-transition:0.2s ease all;
+          -ms-transition:0.2s ease all;
+           -o-transition:0.2s ease all;
+              transition:0.2s ease all;
+  }
+  
+  form input[type=text]:focus,
+  form input[type="password"]:focus {
+      border-color:cornflowerblue;
+  }
+  
+  input[type=submit] {
+      padding:15px 50px;
+      width:auto;
+      background:#3f3d56;
+      border:none;
+      color:white;
+      cursor:pointer;
+      display:inline-block;
+    //   float:right;
+      clear:right;
+      -webkit-transition:0.2s ease all;
+         -moz-transition:0.2s ease all;
+          -ms-transition:0.2s ease all;
+           -o-transition:0.2s ease all;
+              transition:0.2s ease all;
+  }
+  
+  input[type=submit]:hover {
+      opacity:0.8;
+  }
+  
+  input[type="submit"]:active {
+      opacity:0.4;
+  }
+  
+  .forgot,
+  .register {
+      margin:10px;
+    //   float:left;
+      clear:left;
+      display:inline-block;
+      color:cornflowerblue;
+      text-decoration:none;
+  }
+  
+  .forgot:hover,
+  .register:hover {
+      color:darkgray;
+  }
+  
+
+@media (max-width: 600px) {
+  .form-inventory__body {
+    width: auto;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  }
+}

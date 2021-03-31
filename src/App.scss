@@ -1,0 +1,28 @@
+
+@import "common/variables";
+@import "common/mixins";
+@import "common/animations";
+@import "common/utilities";
+@import "common/button/button";
+@import "common/spinner/spinner";
+@import "common/modal/modal";
+@import "common/card/card";
+@import "features/users/user";
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-top: 1rem;
+}
+
